@@ -1,0 +1,30 @@
+.label {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+}
+
+.input + .display {
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(#{--blue});
+  border-radius: 50%;
+}
+
+.input:hover + .display {
+  border-color: #00b3ee;
+}
+
+.input:checked + .display {
+  background-size: contain;
+  background-color: var(#{--purple-dark});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../../../assets/images/icons/checkbox-checked.svg');
+}
