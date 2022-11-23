@@ -1,0 +1,23 @@
+.input {
+  padding: 16px;
+  background-color: var(#{--gray-500});
+  color: var(#{--gray-100});
+  border: 1px solid var(#{--gray-700});
+  border-radius: 8px;
+  transition: all 0.15s ease-in-out;
+  outline: none;
+  width: 100%;
+
+  &::placeholder {
+    color: var(#{--gray-300});
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid var(#{--purple-dark});
+  }
+
+  &.long {
+    max-width: 523px;
+  }
+}
