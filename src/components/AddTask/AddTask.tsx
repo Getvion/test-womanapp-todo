@@ -5,8 +5,8 @@ import { Button, Input } from '..';
 import styles from './AddTask.module.scss';
 
 export const AddTask = () => (
-  <div className={styles.container}>
+  <form onSubmit={(e) => e.preventDefault()} className={styles.container}>
     <Input size='long' change={() => {}} value='' placeholder='Заголовок задачи' />
-    <Button click={() => {}} text='Создать' />
-  </div>
+    <Button type='submit' click={() => {}} text='Создать' />
+  </form>
 );
