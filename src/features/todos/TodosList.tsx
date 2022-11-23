@@ -5,21 +5,17 @@ import { IState } from '../../@types/reduxStore';
 import { useAppDispatch } from '../../app/hooks';
 
 import { TodosItem } from './TodosItem';
-import { emptyTodosState, fetchTodos } from './todosSlice';
+import { fetchTodos } from './todosSlice';
 
 import styles from './Todos.module.scss';
 
 export const TodosList = () => {
   const dispatch = useAppDispatch();
 
-  const { todos } = useSelector((state: IState) => state.todos);
+  const { todos } = useSelector((state: IState) => state);
 
   useEffect(() => {
     dispatch(fetchTodos());
-
-    return () => {
-      dispatch(emptyTodosState());
-    };
   }, []);
 
   const todosCount = todos.length;

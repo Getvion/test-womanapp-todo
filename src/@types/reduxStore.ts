@@ -1,14 +1,11 @@
+import { ITodoItem } from './interfaces';
+
 export interface IState {
-  todos: ITodos;
+  todos: ITodoItem[];
+  todo: ITodoState;
 }
 
-export interface ITodos {
-  todos: {
-    title: string;
-    description: string;
-    isCompleted: boolean;
-    id: number;
-    createdDate: string;
-    completedDate: string;
-  }[];
+export interface ITodoState {
+  todo: ITodoItem;
+  status: 'loading' | 'fulfilled' | 'error' | 'init';
 }

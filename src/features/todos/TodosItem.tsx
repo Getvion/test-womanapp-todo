@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { ITodoItem } from '../../@types/reduxStore';
+import { ITodoItem } from '../../@types/interfaces';
 import { Button } from '../../components';
 
 import styles from './Todos.module.scss';

@@ -1,4 +1,5 @@
 // reducers
+export { todoReducer as todo } from './todo/todoSlice';
 export { todosReducer as todos } from './todos/todosSlice';
 
 // components

@@ -1,15 +1,13 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import { ITodos } from '../../@types/reduxStore';
+import { ITodoItem } from '../../@types/interfaces';
 import { data } from '../../fakeData';
 
-const initialState: ITodos = {
-  todos: []
-};
+const initialState: ITodoItem[] = [];
 
-export const fetchTodos = createAsyncThunk('fetch-todos', () => data);
+export const fetchTodos = createAsyncThunk('fetch-todos', async () => data);
 
-const todoSSlice = createSlice({
+const todosSlice = createSlice({
   name: 'todos',
   initialState,
   reducers: {
@@ -17,12 +15,10 @@ const todoSSlice = createSlice({
   },
 
   extraReducers: (builder) => {
-    builder.addCase(fetchTodos.fulfilled, (state, action) => {
-      state.todos = action.payload;
-    });
+    builder.addCase(fetchTodos.fulfilled, (state, action) => action.payload);
   }
 });
 
-export const { emptyTodosState } = todoSSlice.actions;
+export const { emptyTodosState } = todosSlice.actions;
 
-export const todosReducer = todoSSlice.reducer;
+export const todosReducer = todosSlice.reducer;

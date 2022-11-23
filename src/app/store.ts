@@ -1,10 +1,11 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
-import { todos } from '../features';
+import { todo, todos } from '../features';
 
 export const store = configureStore({
   reducer: {
-    todos
+    todos,
+    todo
   }
 });
 
