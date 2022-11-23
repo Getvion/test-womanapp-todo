@@ -1,5 +1,6 @@
 @import 'modern-normalize/modern-normalize.css';
 @import 'styles/fonts.scss';
+@import 'styles/variables.scss';
 
 *,
 *::before,
@@ -10,7 +11,12 @@
 
 body {
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(#{--gray-100});
+  background-color: var(#{--gray-500});
 }
 
 code {

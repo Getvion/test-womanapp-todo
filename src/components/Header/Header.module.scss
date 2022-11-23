@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 200px;
+  background-color: var(#{--gray-700});
+}
+
+.logo {
+  max-width: 30px;
+  max-height: 30px;
+  object-fit: contain;
+}
+
+.title {
+  color: var(#{--blue});
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 900;
+
+  span {
+    color: var(#{--purple-dark});
+  }
+}
