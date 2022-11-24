@@ -20,4 +20,12 @@
   &.long {
     max-width: 638px;
   }
+
+  &.medium {
+    max-width: 500px;
+  }
+
+  &.short {
+    max-width: 400;
+  }
 }
