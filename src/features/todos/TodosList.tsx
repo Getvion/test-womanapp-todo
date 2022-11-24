@@ -16,11 +16,8 @@ export const TodosList = () => {
   const { todos } = useSelector((state: IState) => state);
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch(fetchTodos());
-    }, 50000);
-  }, []);
-
+    dispatch(fetchTodos());
+  });
   const todosCount = todos.length;
   const todosCompletedCount = todos.filter((todo) => todo.isCompleted).length;
 
