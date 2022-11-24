@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
 
 // хорошо бы защитить все эти ключи и положить их как env переменные
 // так я делал для своего imhonet (https://github.com/Getvion/imhonet-react-ts-redux)
@@ -9,7 +10,10 @@ const firebaseConfig = {
   projectId: 'test-woman-todo',
   storageBucket: 'test-woman-todo.appspot.com',
   messagingSenderId: '525152559003',
-  appId: '1:525152559003:web:4e538f5c1d53b38ad0cb3e'
+  appId: '1:525152559003:web:4e538f5c1d53b38ad0cb3e',
+  databaseURL: 'https://test-woman-todo-default-rtdb.europe-west1.firebasedatabase.app'
 };
 
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+export const db = getDatabase(app);
