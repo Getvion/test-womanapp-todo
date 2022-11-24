@@ -1,0 +1,66 @@
+.container {
+  background-color: var(#{--gray-600});
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.todo {
+  .todo__dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+
+    .todo__completed {
+      background-color: var(#{--gray-600});
+      padding: 5px;
+      border-radius: 5px;
+
+      &.expired {
+        background-color: var(#{--danger});
+      }
+    }
+  }
+
+  .todo__title {
+    font-size: 30px;
+  }
+
+  .todo__description {
+    margin: 10px 0;
+  }
+
+  .todo__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .edit__description {
+    padding: 10px;
+    background-color: var(#{--gray-500});
+    color: var(#{--gray-100});
+    border: 1px solid var(#{--gray-700});
+    border-radius: 8px;
+    transition: all 0.15s ease-in-out;
+    outline: none;
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+
+    &:focus,
+    &:active {
+      border: 1px solid var(#{--purple-dark});
+    }
+  }
+}
