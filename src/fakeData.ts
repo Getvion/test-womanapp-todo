@@ -6,7 +6,7 @@ export const data = [
     isCompleted: false,
     id: 1,
     createdDate: '2018-08-08',
-    completedDate: null
+    completedDate: '2022-10-22'
   },
   {
     title: 'some title',
@@ -15,7 +15,7 @@ export const data = [
     isCompleted: false,
     id: 2,
     createdDate: '2018-08-08',
-    completedDate: null
+    completedDate: '2022-9-22'
   },
   {
     title: 'some title',
@@ -24,7 +24,7 @@ export const data = [
     isCompleted: false,
     id: 3,
     createdDate: '2018-08-08',
-    completedDate: null
+    completedDate: '2022-12-22'
   },
   {
     title: 'some title',
@@ -33,7 +33,7 @@ export const data = [
     isCompleted: false,
     id: 4,
     createdDate: '2018-08-08',
-    completedDate: null
+    completedDate: '2022-10-22'
   },
   {
     title: 'some title',
@@ -42,7 +42,7 @@ export const data = [
     isCompleted: false,
     id: 5,
     createdDate: '2018-08-08',
-    completedDate: null
+    completedDate: '2022-10-22'
   },
   {
     title: 'some title',
