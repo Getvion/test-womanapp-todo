@@ -4,6 +4,11 @@ import { ITodoItem } from '../../@types/interfaces';
 import { ITodoState } from '../../@types/reduxStore';
 import { todosRequests } from '../../api/todos';
 
+/**
+ * Запрос одного todo-элемента из базы.
+ * @function
+ * @param {number} todoId - индекс элемента, который вернется в результате выполнения функции.
+ */
 export const fetchTodoData = createAsyncThunk(
   'fetch-todo',
   async (todoId: number): Promise<ITodoItem> => todosRequests.fetchTodo(todoId)

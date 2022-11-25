@@ -1,11 +1,12 @@
 import dayjs from 'dayjs';
 
-export const compareTwoDates = (date1: string): boolean => {
-  // принимает на вход  аргумент в в формате "YYYY-MM-DD"
-  // возвращает true если результат сравнения больше 0 и false если результат сравнения меньше 0
-  //  т.е. если переданная дата уже прошла, то вернет false
-
-  const newDate1 = dayjs(date1);
+/**
+ * Возвращает true если дата еще не наступила и false если дата уже прошла
+ * @function
+ * @param {string} date - строка в формате "YYYY-MM-DD"
+ */
+export const compareTwoDates = (date: string): boolean => {
+  const newDate1 = dayjs(date);
 
   const todayDate = `${dayjs().year()}-${dayjs().month()}-${dayjs().date()}`;
   const today = dayjs(todayDate);

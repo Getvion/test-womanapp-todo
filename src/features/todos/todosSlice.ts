@@ -5,6 +5,10 @@ import { todosRequests } from '../../api/todos';
 
 const initialState: ITodoItem[] = [];
 
+/**
+ * Возвращает массив todo элементов, типа ITodoItem[]
+ * @function
+ */
 export const fetchTodos = createAsyncThunk(
   'fetch-todos',
   async (): Promise<ITodoItem[]> => todosRequests.fetchTodos()
