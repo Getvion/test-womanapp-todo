@@ -41,7 +41,7 @@ export const Todo = () => {
     return () => {
       dispatch(emptyTodoState());
     };
-  }, []);
+  }, [isEditModeEnabled]);
 
   const { completedDate, createdDate, description, id, title } = todo;
 

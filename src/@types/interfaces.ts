@@ -6,3 +6,5 @@ export interface ITodoItem {
   createdDate: string;
   completedDate: string;
 }
+
+export type FormSubmitType = React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>;
