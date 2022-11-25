@@ -7,7 +7,7 @@ import styles from './Button.module.scss';
 
 interface IProps {
   text: string;
-  click: () => void;
+  click: (e: React.MouseEvent<HTMLButtonElement>) => void;
   type?: 'submit' | 'button' | 'reset';
   icon?: boolean;
   size?: 'big' | 'medium' | 'small';

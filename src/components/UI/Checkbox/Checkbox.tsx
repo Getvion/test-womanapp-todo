@@ -5,9 +5,10 @@ import styles from './Checkbox.module.scss';
 interface IProps {
   checked?: boolean;
   change?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  label?: string;
 }
 
-export const Checkbox: React.FC<IProps> = ({ checked, change }) => (
+export const Checkbox: React.FC<IProps> = ({ checked, change, label }) => (
   <label htmlFor='checkbox' className={styles.label}>
     <input
       checked={checked}
@@ -17,5 +18,6 @@ export const Checkbox: React.FC<IProps> = ({ checked, change }) => (
       id='checkbox'
     />
     <div className={styles.display} />
+    <span className={styles.text}>{label}</span>
   </label>
 );
