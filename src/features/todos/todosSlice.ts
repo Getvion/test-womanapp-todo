@@ -1,11 +1,19 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import { ITodoItem } from '../../@types/interfaces';
-import { data } from '../../fakeData';
+import { todosRequests } from '../../api/todos';
 
 const initialState: ITodoItem[] = [];
 
-export const fetchTodos = createAsyncThunk('fetch-todos', async () => data);
+export const fetchTodos = createAsyncThunk(
+  'fetch-todos',
+  async (): Promise<ITodoItem[]> => todosRequests.fetchTodos()
+);
+
+export const pushTodos = createAsyncThunk(
+  'push-todos-data',
+  async (todos: ITodoItem[]): Promise<ITodoItem[]> => todosRequests.pushTodos(todos)
+);
 
 const todosSlice = createSlice({
   name: 'todos',
@@ -15,7 +23,9 @@ const todosSlice = createSlice({
   },
 
   extraReducers: (builder) => {
-    builder.addCase(fetchTodos.fulfilled, (state, action) => action.payload);
+    builder
+      .addCase(fetchTodos.fulfilled, (_, action) => action.payload)
+      .addCase(pushTodos.fulfilled, (_, action) => action.payload);
   }
 });
 

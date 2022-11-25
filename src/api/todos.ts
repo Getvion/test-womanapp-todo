@@ -17,9 +17,11 @@ const fetchTodos = async (): Promise<ITodoItem[]> => {
   return data;
 };
 
-const pushTodos = async (todos: ITodoItem[]): Promise<void> => {
+const pushTodos = async (todos: ITodoItem[]): Promise<ITodoItem[]> => {
   const dbRef = ref(db);
   await set(child(dbRef, 'todos'), todos);
+
+  return fetchTodos();
 };
 
 export const todosRequests = { fetchTodo, fetchTodos, pushTodos };

@@ -7,7 +7,7 @@ import { IState } from '../../@types/reduxStore';
 import { useAppDispatch } from '../../app/hooks';
 import { Button, Loader } from '../../components';
 import { emptyTodoState, fetchTodoData } from '../../features/todo/todoSlice';
-import { fetchTodos, pushTodos } from '../../features/todos/todosSlice';
+import { pushTodos } from '../../features/todos/todosSlice';
 import { compareTwoDates, formatDate } from '../../helpers';
 
 import { EditTodo } from './EditTodo';
@@ -31,7 +31,6 @@ export const Todo = () => {
     const newTodos = todos.filter((todo) => todo.id !== id);
 
     dispatch(pushTodos(newTodos));
-    dispatch(fetchTodos());
     navigate('/');
   };
 
