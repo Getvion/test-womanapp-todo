@@ -17,13 +17,14 @@ export const TodosList = () => {
 
   useEffect(() => {
     dispatch(fetchTodos());
-  });
-  const todosCount = todos.length;
+  }, []);
+
+  const todosCount = todos?.length;
   const todosCompletedCount = todos.filter((todo) => todo.isCompleted).length;
 
   return (
     <div className={styles.container}>
-      {todos.length ? (
+      {todos?.length ? (
         <>
           <div className={styles.stats}>
             <span className={styles.stats__text}>
@@ -37,8 +38,8 @@ export const TodosList = () => {
             </span>
           </div>
           <div className={styles.list}>
-            {todos.map((todo) => (
-              <TodosItem key={todo.id} {...todo} />
+            {todos.map((todo, index) => (
+              <TodosItem key={todo.id} index={index} {...todo} />
             ))}
           </div>
         </>
