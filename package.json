@@ -1,6 +1,6 @@
 {
   "name": "test-womanapp-todo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
@@ -18,8 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint", 
-    "firebase" : "firebase",
+    "lint": "eslint",
+    "firebase": "firebase",
     "predeploy": "npm run build",
     "deploy": "firebase deploy"
   },
